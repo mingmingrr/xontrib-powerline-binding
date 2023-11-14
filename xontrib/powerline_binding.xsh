@@ -12,7 +12,6 @@ __all__ = ()
 
 powerline_args = PowerlineArgs({
     "jobnum": 0,
-    "last_pipe_status": 0,
     "last_exit_code": 0,
     "execution_time": 0
 })
@@ -29,7 +28,6 @@ xplt = XonshPowerline(powerline_args, "toolbar")
 @events.on_postcommand
 def update_args(cmd, rtn, out, ts):
     powerline_args["jobnum"] = len(jobs.get_tasks())
-    powerline_args["last_pipe_status"] = rtn
     powerline_args["last_exit_code"] = rtn
     powerline_args["execution_time"] = ts[1] - ts[0] if ts else 0
 
