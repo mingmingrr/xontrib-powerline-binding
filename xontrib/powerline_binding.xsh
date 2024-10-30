@@ -3,7 +3,7 @@
 import builtins
 import shutil
 import os
-from xonsh import jobs
+from xonsh.procs import jobs
 from powerline_xonsh import XonshPowerline, PowerlineArgs
 
 
